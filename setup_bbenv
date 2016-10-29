@@ -45,30 +45,38 @@ args = parse_args()
 os.chdir(HOME)
 
 if args.install:
-    APT_PKGS = (
-        'curl',
-        'exuberant-ctags',
-        'htop',
-        'ipython',
-        'ipython3',
-        'meld',
-        'python-pip',
-        'python3-pip',
-        'xsel',
-        'zsh',
+    MACPORTS_PKGS = (
+        'install itstool py27-pip maven3 bash-completion htop ctags tree curl'
+        'install tmux neovim',
+        'install py27-readline',
+        'install python2 +readline',
+        'install python35 +readline',
+        'install py35-pip',
+        'install openssh +ssh-copy-id',
+        'install git +bash_completion +svn',
+        'install zsh zsh-completions',
+        'select --set maven maven3',
     )
     PIP_PKGS = (
+        'git-review',
+        'isort',
+        'paramiko',
+        'pep8',
+        'polib',
         'prettytable',
+        'pylint',
+        'scp',
+        'neovim',
     )
     PIP3_PKGS = (
         'neovim',
     )
 
-    call('apt-get --ignore-missing install ' + ' '.join(APT_PKGS))
+    for pkg in MACPORTS_PKGS:
+        call('port ' + pkg)
     call('pip install ' + ' '.join(PIP_PKGS))
-    call('pip3 install ' + ' '.join(PIP3_PKGS))
-    call('curl -L http://install.ohmyz.sh | sh')
-    call('chsh -s $(which zsh)')
+    call('pip-3.5 install ' + ' '.join(PIP3_PKGS))
+    call('sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"')
 
 # Symlink dot files
 Symlink = namedtuple('Symlink', ('src', 'target'))

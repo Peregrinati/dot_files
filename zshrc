@@ -55,14 +55,6 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
-export PATH="$PATH:$HOME/.bin"
-
-export GOPATH=$(readlink -f "$HOME/Code/go")
-export PATH="$PATH:$GOPATH/bin:/usr/lib/go/bin"
-
-# export VIMRUNTIME="$HOME/src/neovim/runtime"
-
 setopt histignoredups
 setopt no_share_history
 setopt HIST_IGNORE_DUPS
@@ -70,19 +62,6 @@ setopt HIST_FIND_NO_DUPS
 setopt HIST_IGNORE_SPACE
 HISTSIZE=99999
 SAVEHIST=99999
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='nvim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 DISABLE_AUTO_TITLE=true
 
