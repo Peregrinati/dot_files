@@ -72,3 +72,22 @@ export VISUAL=nvim
 export EDITOR=nvim
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# PATHS
+
+# Add the Mac OS Java home directory
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+# Add macports python path for packages installed with pip
+PATH="/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin/:$PATH"
+# Add macports default path
+PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Add go stuff to path
+export GOPATH=$HOME/Code/go
+PATH="$GOPATH/bin:/usr/lib/go/bin:$PATH"
+# Add my tools to path
+PATH="$HOME/.bin:$PATH"
+# Add achilles-tools to my path
+PATH="$HOME/Work/achilles-tools:$PATH"
+
+export PATH
