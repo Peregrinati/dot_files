@@ -55,6 +55,8 @@ if args.install:
         'install openssh +ssh-copy-id',
         'install git +bash_completion +svn',
         'install zsh zsh-completions',
+        'install tmux-pasteboard'
+        'install corutils'
         'select --set maven maven3',
     )
     PIP_PKGS = (
