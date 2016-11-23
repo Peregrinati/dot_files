@@ -130,6 +130,8 @@ endfunction
 
 augroup highlights
   autocmd!
+  autocmd ColorScheme * hi NeomakeErrorSign ctermfg=red
+  autocmd ColorScheme * hi NeomakeWarningSign ctermfg=lightyellow
   autocmd ColorScheme * call s:sethighlights()
 augroup end
 
@@ -511,8 +513,6 @@ endif
 " ===================== Neomake =====================
 augroup my_error_signs
 au!
-autocmd ColorScheme * hi NeomakeErrorSign ctermfg=red
-autocmd ColorScheme * hi NeomakeWarningSign ctermfg=lightyellow
 augroup END
 
 " ==================== UltiSnips ====================
