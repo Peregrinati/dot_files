@@ -31,7 +31,7 @@ ZSH_THEME="peregrinati"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ll="ll --group-directories-first"
+alias ll="ls -l --group-directories-first"
 alias units="units -v -o %f"
 alias oo="gnome-open"
 
