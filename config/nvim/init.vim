@@ -145,11 +145,18 @@ autocmd FileType help wincmd L
 
 " This comes first, because we have mappings that depend on leader
 " With a map leader it's possible to do extra key combinations
-" i.e: <leader>w saves the current file
 let mapleader = ","
+
+" quickly open quickfix/location list window
+nnoremap <leader>l :lopen<CR>
+nnoremap <leader>q :copen<CR>
 
 " quickly close quickfix/location list window
 nnoremap <leader>x :lclose <bar> cclose<CR>
+
+" quickly jump to the first of the quickfix/location list
+nnoremap <leader>q :qfirst<CR>
+nnoremap <leader>l :lfirst<CR>
 
 "easily edit/source vim config
 nmap <leader>ev :vsplit $MYVIMRC<cr>
@@ -163,10 +170,6 @@ nnoremap x "_x
 "-Map <C-I> to 'Increment number' and <C-D> to 'Decrement number'
 noremap <C-I> <C-A>
 noremap <C-D> <C-X>
-
-" Fast saving
-nnoremap <leader>w :w!<cr>
-nnoremap <silent> <leader>q :q!<CR>
 
 " Center the screen
 nnoremap <space> zz
