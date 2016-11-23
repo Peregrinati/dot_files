@@ -30,6 +30,8 @@ Plug 'unblevable/quick-scope'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }  " fuzzy finder
 Plug 'junegunn/fzf.vim'                                             " fuzzy finder vim settings
 
+Plug 'neomake/neomake'
+
 if has('nvim')
   function! DoRemote(arg)
     UpdateRemotePlugins
@@ -503,6 +505,13 @@ else
   call neocomplete#custom#source('_', 'sorters', [])
 endif
 
+" ===================== Neomake =====================
+augroup my_error_signs
+au!
+autocmd ColorScheme * hi NeomakeErrorSign ctermfg=red
+autocmd ColorScheme * hi NeomakeWarningSign ctermfg=lightyellow
+augroup END
+
 " ==================== UltiSnips ====================
 function! g:UltiSnips_Complete()
   call UltiSnips#ExpandSnippet()
@@ -581,6 +590,8 @@ augroup python-cmds
   autocmd FileType python setlocal expandtab ts=4 sw=4 sts=4
   autocmd FileType python setlocal textwidth=79 colorcolumn=+1
   autocmd FileType python autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+  autocmd FileType python autocmd BufWritePost * Neomake
+  autocmd FileType python autocmd BufWinEnter * Neomake
 augroup end
 
 augroup lua-cmds
