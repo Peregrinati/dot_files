@@ -33,7 +33,6 @@ ZSH_THEME="peregrinati"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ll="ls -l --group-directories-first"
 alias units="units -v -o %f"
-alias oo="gnome-open"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
