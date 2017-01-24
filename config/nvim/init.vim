@@ -44,11 +44,12 @@ else
   Plug 'Shougo/neocomplete.vim'
 endif
 
-if has('nvim')
-  Plug 'frankier/neovim-colors-solarized-truecolor-only'
-else
-  Plug 'altercation/vim-colors-solarized'
-endif
+Plug 'romainl/Apprentice'
+" if has('nvim')
+"   Plug 'frankier/neovim-colors-solarized-truecolor-only'
+" else
+"   Plug 'altercation/vim-colors-solarized'
+" endif
 
 " filetype plugins
 Plug 'vim-ruby/vim-ruby'
@@ -137,7 +138,7 @@ augroup highlights
 augroup end
 
 set background=dark
-colorscheme solarized
+colorscheme apprentice
 
 " open help vertically
 command! -nargs=* -complete=help Help vertical belowright help <args>
