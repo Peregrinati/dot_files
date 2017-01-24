@@ -466,7 +466,8 @@ function! LightLineMode()
 endfunction
 
 function! LightLineFilename()
-  let fname = expand('%:t')
+  let fname = expand('%')
+  let fname = substitute(fname, $HOME, '~', '')
   if mode() == 't'
     return ''
   endif
