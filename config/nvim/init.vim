@@ -395,13 +395,13 @@ let g:lightline = {
       \ 'active': {
       \   'left': [ [ 'mode', 'paste'],
       \             [ 'fugitive', 'filename', 'modified' ],
-      \             [ 'go'] ],
+      \             [ 'go' ] ],
       \   'right': [ [ 'lineinfo' ],
       \              [ 'percent' ],
       \              [ 'fileformat', 'fileencoding', 'filetype' ] ]
       \ },
       \ 'inactive': {
-      \   'left': [ [ 'go'] ],
+      \   'left': [ [ 'filename' ], [ 'go' ] ],
       \ },
       \ 'component_function': {
       \   'lineinfo': 'LightLineInfo',
