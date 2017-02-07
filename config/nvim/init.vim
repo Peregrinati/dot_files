@@ -22,7 +22,6 @@ Plug 'tpope/vim-characterize'          " Press ga on a character to view encodin
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'                " allows repeate key (.) to work with more things
-Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-tbone'                 " back Tmux commanys (:Tyank, :Tput)
 Plug 'tpope/vim-unimpaired'            " short normal mode aliases for commonly used ex commands
@@ -42,6 +41,7 @@ if has('nvim')
   Plug 'zchee/deoplete-jedi'
 else
   Plug 'Shougo/neocomplete.vim'
+  Plug 'tpope/vim-sensible'
 endif
 
 Plug 'romainl/Apprentice'
