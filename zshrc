@@ -92,12 +92,3 @@ export VISUAL=nvim
 export EDITOR=nvim
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# WORK ONLY
-
-# Setup the GE Proxy
-export all_proxy=10.114.16.12:80
-export https_proxy=10.114.16.12:80
-export http_proxy=10.114.16.12:80
-export ftp_proxy=10.114.16.12:80
-export rsync_proxy=10.114.16.12:80
