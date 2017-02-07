@@ -597,7 +597,6 @@ augroup python-cmds
   autocmd FileType python setlocal textwidth=79 colorcolumn=+1
   autocmd FileType python autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
   autocmd FileType python autocmd BufWritePost * Neomake
-  autocmd FileType python autocmd BufWinEnter * Neomake
 augroup end
 
 augroup lua-cmds
