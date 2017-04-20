@@ -46,14 +46,14 @@ map <C-f> :echo expand("%:p")<cr>
 
 " Terminal settings
 if has('nvim')
-  " Leader q to exit terminal mode.
-  tnoremap <Leader>q <C-\><C-n>
+  " Escape to exit terminal mode.
+  tnoremap <Esc> <C-\><C-n>
 
   " mappings to move out from terminal to other views
-  tnoremap <C-h> <C-\><C-n><C-w>h
-  tnoremap <C-j> <C-\><C-n><C-w>j
-  tnoremap <C-k> <C-\><C-n><C-w>k
-  tnoremap <C-l> <C-\><C-n><C-w>l
+  tnoremap <C-w>h <C-\><C-n><C-w>h
+  tnoremap <C-w>j <C-\><C-n><C-w>j
+  tnoremap <C-w>k <C-\><C-n><C-w>k
+  tnoremap <C-w>l <C-\><C-n><C-w>l
 
   " Open terminal in vertical, horizontal and new tab
   nnoremap <leader>Tb :e term://zsh<CR>i

@@ -20,6 +20,10 @@ if !has('nvim')
   set mouse=a
 endif
 
+if has('nvim')
+  let g:terminal_scrollback_buffer_size = 100000
+endif
+
 set autowrite                " Automatically save before :next, :make etc.
 set completeopt=menu,menuone " Autocompletion using pop up menu
 set fileformats=unix,dos,mac " Prefer Unix over Windows over OS 9 formats
