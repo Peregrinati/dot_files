@@ -14,7 +14,6 @@ Plug 'junegunn/vim-easy-align'         " align text to columns in an interactive
 Plug 'majutsushi/tagbar'               " display file outline in tagbar
 Plug 'mbbill/undotree'
 Plug 'mhinz/vim-grepper'
-Plug 'myusuf3/numbers.vim'             " Relative line numbers
 Plug 'qpkorr/vim-bufkill'              " add uppercase BD and BW commands that don't mess up splits
 Plug 't9md/vim-choosewin'              " tmux-like window chooser
 Plug 'tpope/vim-abolish'               " Case-matching substitution, abbreviation, and coercion
@@ -99,6 +98,7 @@ set noshowmode               " We show the mode with airline or lightline
 set noswapfile               " Don't use swapfile
 set nowrap                   " No soft wrapping
 set number                   " Show line numbers
+set relativenumber           " Show relative line numbers
 set pumheight=10             " Completion window max size
 set showcmd                  " Show me what I'm typing
 set splitbelow               " Split horizontal windows below to the current windows
