@@ -182,9 +182,6 @@ nnoremap <space> zz
 " Remove search highlight
 nnoremap <leader><space> :nohlsearch<CR>
 
-" Source the current Vim file
-nnoremap <leader>pr :Runtime<CR>
-
 " Close all but the current one
 nnoremap <leader>o :only<CR>
 
@@ -279,12 +276,12 @@ vnoremap # :<C-u>call <SID>VSetSearch()<CR>??<CR><c-o>
 "===================== PLUGINS ======================
 
 " ===================Easy Align =====================
-nmap ga <Plug>(EasyAlign)
-xmap ga <Plug>(EasyAlign)
+nmap gA <Plug>(EasyAlign)
+xmap gA <Plug>(EasyAlign)
 
 " ===================== FZF =========================
 nnoremap <leader>f :Files .<CR>
-nnoremap <leader>b :Buffers<CR>
+nnoremap <leader>B :Buffers<CR>
 let g:fzf_buffers_jump = 1
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
