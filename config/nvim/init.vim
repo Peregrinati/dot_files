@@ -196,9 +196,8 @@ map <C-f> :echo expand("%:p")<cr>
 
 " Terminal settings
 if has('nvim')
-  " Leader q to exit terminal mode. Somehow it jumps to the end, so jump to
-  " the top again
-  tnoremap <Leader>q <C-\><C-n>gg<cr>
+  " Leader q to exit terminal mode.
+  tnoremap <Leader>q <C-\><C-n>
 
   " mappings to move out from terminal to other views
   tnoremap <C-h> <C-\><C-n><C-w>h
@@ -213,6 +212,10 @@ if has('nvim')
 
   " always start terminal in insert mode
   autocmd BufWinEnter,WinEnter term://* startinsert
+
+  " turn off line numbering
+  autocmd BufWinEnter,WinEnter term://* set nonumber
+  autocmd BufWinEnter,WinEnter term://* set norelativenumber
 endif
 
 " Visual linewise up and down by default (and use gj gk to go quicker)
