@@ -633,4 +633,6 @@ augroup make-cmds
   autocmd FileType make setlocal spell
 augroup end
 
+autocmd BufNewFile,BufRead /**/COMMIT_EDITMSG setlocal spell
+
 " vim: ts=2 sw=2 et
