@@ -21,6 +21,8 @@ if !has('nvim')
 endif
 
 if has('nvim')
+  set termguicolors
+  set guicursor=n-v-c:block-Cursor/lCursor-blinkon0,i-ci:ver25-Cursor/lCursor,r-cr:hor20-Cursor/lCursor
   let g:terminal_scrollback_buffer_size = 100000
 endif
 
@@ -61,7 +63,6 @@ endif
 if has('!nvim')
   syntax enable
   set t_Co=256
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 endif
 
 " open help vertically

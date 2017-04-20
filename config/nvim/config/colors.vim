@@ -3,6 +3,9 @@ function! s:sethighlights()
   highlight ColorColumn ctermbg=52
   highlight clear SpellBad
   highlight SpellBad cterm=underline
+  if has('nvim')
+    highlight TermCursor ctermfg=red guifg=red
+  endif
 endfunction
 
 augroup highlights
@@ -14,3 +17,5 @@ augroup end
 
 set background=dark
 colorscheme apprentice
+
+" vim: ts=2 sw=2 et
