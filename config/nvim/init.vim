@@ -598,6 +598,7 @@ augroup python-cmds
   autocmd FileType python setlocal textwidth=79 colorcolumn=+1
   autocmd FileType python autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
   autocmd FileType python autocmd BufWritePost * Neomake
+  autocmd FileType python :iabbrev <buffer> pdb import pdb; pdb.set_trace()
 augroup end
 
 augroup lua-cmds
