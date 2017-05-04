@@ -2,6 +2,10 @@
 " With a map leader it's possible to do extra key combinations
 let mapleader = ","
 
+" vim-unimpaired like tab navigation
+nmap [t :tabprev<CR>
+nmap ]t :tabnext<CR>
+
 " quickly open quickfix/location list window
 nnoremap <leader>l :lopen<CR>
 nnoremap <leader>q :copen<CR>
@@ -46,8 +50,8 @@ map <C-f> :echo expand("%:p")<cr>
 
 " Terminal settings
 if has('nvim')
-  " Escape to exit terminal mode.
-  tnoremap <Esc> <C-\><C-n>
+  " <leader>-q to exit terminal mode.
+  tnoremap <leader>q <C-\><C-n>
 
   " mappings to move out from terminal to other views
   tnoremap <C-w>h <C-\><C-n><C-w>h
@@ -145,8 +149,8 @@ nmap <F3>  :UndotreeToggle<CR>
 nmap <F4>  :TagbarToggle<CR>
 nmap <F12> :call <SID>StripTrailingWhitespaces()<CR>
 
-" ===================== Quick Scope =======================
-nmap -  <Plug>(choosewin)
+" ==================== vim-choosewin ======================
+nmap <C-W>w <Plug>(choosewin)
 
 " ====================== Easy Align =======================
 nmap gA <Plug>(EasyAlign)
