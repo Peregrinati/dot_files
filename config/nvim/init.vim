@@ -17,6 +17,7 @@ call <SID>SourceConf('plugin_conf')
 call <SID>SourceConf('colors')
 call <SID>SourceConf('keys')
 call <SID>SourceConf('statusline')
+call <SID>SourceConf('types')
 
 " Stuff that should only exist at work or home or wherever can go in the
 " local file, which should be untracked by git.
