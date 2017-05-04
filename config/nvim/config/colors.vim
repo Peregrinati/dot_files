@@ -4,7 +4,7 @@ function! s:sethighlights()
   highlight clear SpellBad
   highlight SpellBad cterm=underline
   if has('nvim')
-    highlight TermCursor ctermfg=red guifg=red
+    highlight TermCursor ctermfg=cyan guifg=cyan
   endif
 endfunction
 

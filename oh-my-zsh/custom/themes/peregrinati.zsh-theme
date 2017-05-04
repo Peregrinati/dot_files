@@ -16,7 +16,7 @@ eval HOST="badapple"
 
 # Check the UID
 if [[ $UID -ge 1000 ]]; then # normal user
-  eval PR_USER='${PR_BLUE}$USER${PR_NO_COLOR}'
+  eval PR_USER='${PR_WHITE}$USER${PR_NO_COLOR}'
   local PR_PROMPT='$PR_NO_COLOR➢ $PR_NO_COLOR'
 elif [[ $UID -eq 0 ]]; then # root
   eval PR_USER='${PR_RED}$USER${PR_NO_COLOR}'
@@ -27,7 +27,7 @@ fi
 if [[ -n "$SSH_CLIENT"  ||  -n "$SSH2_CLIENT" ]]; then
   eval PR_HOST='${PR_YELLOW}$HOST${PR_NO_COLOR}' #SSH
 else
-  eval PR_HOST='${PR_BLUE}$HOST${PR_NO_COLOR}' # no SSH
+  eval PR_HOST='${PR_WHITE}$HOST${PR_NO_COLOR}' # no SSH
 fi
 
 local sep_clr="$FG[243]"
