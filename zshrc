@@ -34,6 +34,8 @@ ZSH_THEME="peregrinati"
 alias ll="ls -l --group-directories-first"
 alias units="units -v -o %f"
 
+alias nvim="$HOME/.bin/nvim_wrapper"
+
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
