@@ -148,6 +148,21 @@ endif
 au InsertEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
 au InsertEnter * exec "inoremap <silent> " . g:UltiSnipsJumpBackwardTrigger . " <C-R>=g:UltiSnips_Reverse()<cr>"
 
+" ==================== vim-choosewin ======================
+let g:choosewin_keymap = {
+      \ '0':     '<NOP>',
+      \ '[':     '<NOP>',
+      \ ']':     '<NOP>',
+      \ '$':     '<NOP>',
+      \ 'x':     '<NOP>',
+      \ ';':     'win_land',
+      \ '-':     'previous',
+      \ 's':     'swap',
+      \ 'S':     'swap_stay',
+      \ "\<CR>": 'win_land',
+      \ }
+let g:choosewin_label = '1234567890'
+let g:choosewin_tablabel = 'ABCDEFGHIJKLMNOPQRTUVWYZ'
 
 " ================== Quick Scope ===================
 " Trigger a highlight in the appropriate direction when pressing these keys:
