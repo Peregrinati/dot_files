@@ -129,7 +129,7 @@ endfunction
 vnoremap * :<C-u>call <SID>VSetSearch()<CR>//<CR><c-o>
 vnoremap # :<C-u>call <SID>VSetSearch()<CR>??<CR><c-o>
 
-function! <SID>StripTrailingWhitespaces()
+function! StripTrailingWhitespaces()
     " Preparation: save last search, and cursor position.
     let _s=@/
     let l = line(".")
@@ -147,7 +147,7 @@ endfunction
 " =========================================================
 nmap <F3>  :UndotreeToggle<CR>
 nmap <F4>  :TagbarToggle<CR>
-nmap <F12> :call <SID>StripTrailingWhitespaces()<CR>
+nmap <F12> :call StripTrailingWhitespaces()<CR>
 
 " ==================== vim-choosewin ======================
 nmap <C-W>w <Plug>(choosewin)
