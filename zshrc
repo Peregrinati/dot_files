@@ -4,7 +4,12 @@
 export JAVA_HOME=$(/usr/libexec/java_home)
 
 # Add macports python path for packages installed with pip
+PATH="/opt/local/Library/Frameworks/Python.framework/Versions/3.6/bin/:$PATH"
+PATH="/opt/local/Library/Frameworks/Python.framework/Versions/3.5/bin/:$PATH"
 PATH="/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin/:$PATH"
+PATH="$HOME/Library/Python/3.6/bin/:$PATH"
+PATH="$HOME/Library/Python/3.5/bin/:$PATH"
+PATH="$HOME/Library/Python/2.7/bin/:$PATH"
 # Add macports default path
 PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Add GNU coreutils path
