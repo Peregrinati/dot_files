@@ -6,6 +6,12 @@ let mapleader = ","
 nmap [t :tabprev<CR>
 nmap ]t :tabnext<CR>
 
+" vim-unimpaired mappings in terminal mode
+tmap [b <C-\><C-n>:bprev<CR>
+tmap ]b <C-\><C-n>:bnext<CR>
+tmap [t <C-\><C-n>:tabprev<CR>
+tmap ]t <C-\><C-n>:tabnext<CR>
+
 " quickly open quickfix/location list window
 nnoremap <leader>l :lopen<CR>
 nnoremap <leader>q :copen<CR>
@@ -61,12 +67,16 @@ if has('nvim')
 
   " Open terminal in vertical, horizontal and new tab
   nnoremap <leader>Tb :e term://zsh<CR>i
+  tnoremap <leader>Tb <C-\><C-n>:e term://zsh<CR>i
   nnoremap <leader>Tv :vsplit term://zsh<CR>
+  tnoremap <leader>Tv <C-\><C-n>:vsplit term://zsh<CR>
   nnoremap <leader>Ts :split term://zsh<CR>
+  tnoremap <leader>Ts <C-\><C-n>:split term://zsh<CR>
   nnoremap <leader>Tt :tabnew term://zsh<CR>
+  tnoremap <leader>Tt <C-\><C-n>:tabnew term://zsh<CR>
 
   " always start terminal in insert mode
-  " autocmd BufWinEnter,WinEnter term://* startinsert
+  autocmd BufWinEnter,WinEnter term://* startinsert
 
   " turn off line numbering
   autocmd BufWinEnter,WinEnter term://* set nonumber
@@ -159,6 +169,8 @@ xmap gA <Plug>(EasyAlign)
 " ======================== FZF ============================
 nnoremap <leader>f :Files .<CR>
 nnoremap <leader>B :Buffers<CR>
+tnoremap <leader>f <C-\><C-n>:Files .<CR>
+tnoremap <leader>B <C-\><C-n>:Buffers<CR>
 
 " ===================== Git Gutter ========================
 nmap <Leader>hs <Plug>GitGutterStageHunk
@@ -188,6 +200,7 @@ augroup end
 nmap gs  <plug>(GrepperOperator)
 xmap gs  <plug>(GrepperOperator)
 nnoremap <leader>/ :Grepper -nojump<CR>
+tnoremap <leader>/ <C-\><C-n>:Grepper -nojump<CR>
 "
 " ====================== delimitMate ======================
 imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR"
