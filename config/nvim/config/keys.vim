@@ -13,8 +13,8 @@ tmap [t <C-\><C-n>:tabprev<CR>
 tmap ]t <C-\><C-n>:tabnext<CR>
 
 " quickly open quickfix/location list window
-nnoremap <leader>l :lopen<CR>
-nnoremap <leader>q :copen<CR>
+nnoremap <leader>L :lopen<CR>
+nnoremap <leader>Q :copen<CR>
 
 " quickly close quickfix/location list window
 nnoremap <leader>x :lclose <bar> cclose<CR>
