@@ -21,6 +21,10 @@
 	cleanup-check = "!echo 'These branches have already been merged'; git branch --merged | grep -v '\\*'"  # Displays branches that would be deleted by the 'cleanup' alias
 	addnows = "!sh -c 'git diff -w --no-color "$@" | git apply --cached --ignore-whitespace' -"  # Stages all non-whitespace changes
 	pull = pull --ff-only
+	# Submit a patch to review as a draft and run the Jenkins builds.
+	rev-draft = review --draft --reviewers build --no-rebase
+	# Submit a patch to review as a draft and run the Jenkins extensive (extensive, data and data-secure) builds.
+	rev-draft-extensive = review --draft --reviewers build --topic=extensive-test --no-rebase
 [core]
 	mergeoptions = --no-commit
 	editor = nvim
