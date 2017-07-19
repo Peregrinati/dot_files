@@ -64,10 +64,14 @@ if has('nvim')
   tnoremap <C-w>j <C-\><C-n><C-w>j
   tnoremap <C-w>k <C-\><C-n><C-w>k
   tnoremap <C-w>l <C-\><C-n><C-w>l
+  tnoremap <C-w>s <C-\><C-n><C-w>s
+  tnoremap <C-w>v <C-\><C-n><C-w>v
+  tnoremap <C-w>o <C-\><C-n><C-w>o
+  tnoremap <C-w>w <C-\><C-n><C-w>w
 
   " Open terminal in vertical, horizontal and new tab
-  nnoremap <leader>Tb :e term://zsh<CR>i
-  tnoremap <leader>Tb <C-\><C-n>:e term://zsh<CR>i
+  nnoremap <leader>Tb :e term://zsh<CR>
+  tnoremap <leader>Tb <C-\><C-n>:e term://zsh<CR>
   nnoremap <leader>Tv :vsplit term://zsh<CR>
   tnoremap <leader>Tv <C-\><C-n>:vsplit term://zsh<CR>
   nnoremap <leader>Ts :split term://zsh<CR>
