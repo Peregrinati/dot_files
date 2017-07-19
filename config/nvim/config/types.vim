@@ -48,4 +48,9 @@ augroup end
 
 autocmd BufNewFile,BufRead /**/COMMIT_EDITMSG setlocal spell
 
+augroup fmt
+  autocmd!
+  autocmd BufWritePre *.c,*.h Neoformat
+augroup end
+
 " vim: ts=2 sw=2 et

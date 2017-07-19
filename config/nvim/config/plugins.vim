@@ -22,11 +22,14 @@ Plug 'tpope/vim-repeat'                " allows repeate key (.) to work with mor
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-tbone'                 " back Tmux commanys (:Tyank, :Tput)
 Plug 'tpope/vim-unimpaired'            " short normal mode aliases for commonly used ex commands
+Plug 'tpope/vim-sleuth'                " autmatically detect indent settings
+Plug 'severin-lemaignan/vim-minimap'
 Plug 'unblevable/quick-scope'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }  " fuzzy finder
 Plug 'junegunn/fzf.vim'                                             " fuzzy finder vim settings
 
+Plug 'sbdchd/neoformat'
 Plug 'neomake/neomake'
 
 if has('nvim')
