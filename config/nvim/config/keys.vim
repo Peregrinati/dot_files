@@ -164,7 +164,7 @@ nmap <F4>  :TagbarToggle<CR>
 nmap <F12> :call StripTrailingWhitespaces()<CR>
 
 " ==================== vim-choosewin ======================
-nmap <C-W>w <Plug>(choosewin)
+nmap <C-W>c <Plug>(choosewin)
 
 " ====================== Easy Align =======================
 nmap gA <Plug>(EasyAlign)
