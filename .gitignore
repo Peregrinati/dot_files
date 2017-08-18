@@ -1,4 +1,3 @@
 /config/nvim/spell/*
 /config/nvim/config/local.vim
 /zshrc.local
-/bin/diff-so-fancy

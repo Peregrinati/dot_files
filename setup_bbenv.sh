@@ -1,4 +1,4 @@
-#!/bin/bash
+#!env bash
 
 function ask() {
   # https://djm.me/ask
@@ -45,24 +45,29 @@ function elementIn() {
 }
 
 if ask "Install debian packages?" N; then
-  sudo apt install \
+  pkg install \
     htop \
     ctags \
     tree \
     curl \
-    python-pip python3-pip \
-    python3-venv \
     neovim \
     git \
     coreutils \
-    boxes \
-    figlet \
+    python \
+    python2 \
+    python-dev \
+    python2-dev \
+    termux-api \
+    golang \
+    fzf \
+    perl \
+    openssh \
     ;
   echo -e "done installing debian packages\n\n"
 fi
 
 if ask "Install pip packages?" N; then
-  pip install \
+  pip2 install \
     git-review \
     isort \
     paramiko \
@@ -82,20 +87,13 @@ if ask "Install pip packages?" N; then
 fi
 
 if ask "Install oh-my-zsh?" N; then
-  sudo sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  bash -c "$(curl -fsSL https://git.io/oh-my-termux)"
   echo -e "done installing oh-my-zsh\n\n"
 fi
 
 if [[ "$SHELL" != *"zsh"* ]] && ask "Change to zsh?" N; then
   chsh -s $(which zsh)
   echo -e "done switching to zsh\n\n"
-fi
-
-if ask "Install/update diff-so-fancy?" N; then
-  dest="bin/diff-so-fancy"
-  wget -O $dest https://raw.githubusercontent.com/so-fancy/diff-so-fancy/master/third_party/build_fatpack/diff-so-fancy
-  chmod +x $dest
-  echo -e "done installing diff-so-fancy\n\n"
 fi
 
 if ask "Install/update symlinks?" N; then
@@ -115,8 +113,9 @@ if ask "Install/update symlinks?" N; then
   done
 
   if ask "Are you sure?" Y; then
+    mkdir $HOME/.config
     for link in ${links[*]}; do
-      ln -s -i "$(realpath $link)" "$HOME/.$link"
+      ln -s "$(realpath $link)" "$HOME/.$link"
     done
   fi
 
